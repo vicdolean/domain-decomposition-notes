@@ -55,18 +55,8 @@ $U^{n+1} = U^n + D^{-1}(F - AU^n)$
 ### Block Jacobi Setup
 
 Let:
-$$
-A =
-\begin{pmatrix}
-A_{11} & A_{12} \\
-A_{21} & A_{22}
-\end{pmatrix}, \quad
-U =
-\begin{pmatrix}
-U_1 \\
-U_2
-\end{pmatrix}
-$$
+$A = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}$,  
+$U = \begin{pmatrix} U_1 \\ U_2 \end{pmatrix}$
 
 **Update:**
 - $A_{11} U^{n+1}_1 = F_1 - A_{12} U^n_2$
