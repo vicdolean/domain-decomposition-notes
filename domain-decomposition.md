@@ -73,8 +73,8 @@ This reflects RAS/ASM in global PDE solvers.
 | Continuous    | Discrete              |
 |---------------|-----------------------------|
 | $\Omega = \cup_i \Omega_i$ | $N = \cup_i N_i$ |
-| $u : \Omega \to \mathbb{R}$ | $U \in \mathbb{R}^{|N|}$ |
-| Restriction $u_i$ | $R_i \in \{0,1\}^{|N_i| \times |N|}$ |
+| $u : \Omega \to {R}$ | $U \in R^{|N|}$ |
+| Restriction $u|_{\Omega_i}$ | $R_i \in \{0,1\}^{|N_i| \times |N|}$ |
 | Extension $E_i$ | $R_i^T$ |
 | Partition: $u = \sum E_i(\chi_i u_i)$ | $\sum R_i^T D_i R_i = I$ |
 
