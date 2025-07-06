@@ -1,6 +1,6 @@
 # Domain Decomposition Foundations
 
-## 2.1 The Schwarz Method: Origin of Domain Decomposition
+## The Schwarz Method: Origin of Domain Decomposition
 
 **Original Schwarz Method (1870):**  
 A classical overlapping method to solve $-\Delta u = f$ in $\Omega$ with homogeneous Dirichlet boundary conditions by alternating updates over overlapping subdomains.
@@ -25,7 +25,7 @@ Given $u^n_1$, $u^n_2$, compute:
 
 ---
 
-## 2.2 Abstract ASM and RAS: Local-to-Global Strategy
+## Abstract ASM and RAS: Local-to-Global Strategy
 
 **Definition 1 (Extension Operators):**  
 Each $E_i$ extends a function $w_i: \Omega_i \rightarrow \mathbb{R}$ to a global function $E_i(w_i): \Omega \rightarrow \mathbb{R}$, zero outside $\Omega_i$.
