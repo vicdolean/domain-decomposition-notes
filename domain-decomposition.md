@@ -59,7 +59,7 @@ Let the natural block splitting of $A$.
 - $A_{22} U_1^{n+1} = F_2 - A_{21} U_1^n$
 
 **Residual Form:**
-$U^{n+1} = U^n$
+$U^{n+1} = U^n +(R_1^T A_{11}^{-1} R_1 + R_2^T A_{22}^{-1} R_2)r^n$
 
 
 This reflects RAS/ASM in global PDE solvers.
