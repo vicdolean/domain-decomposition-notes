@@ -17,7 +17,7 @@ Where:
 
 **Key challenge:** The inverse problem is ill-posed and computationally demanding, especially at high frequencies or in complex domains.
 
-![Wave propagation examples](/figures/em_wave_examples.png)
+![Wave propagation examples](/figures/avc1imag_v2.png)
 <!-- Replace with images such as avc1imag_v2.png, coupesagittale_v2.png, resistor.png -->
 
 ---
