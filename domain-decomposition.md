@@ -69,45 +69,17 @@ This reflects RAS/ASM in global PDE solvers.
 ### 1D Poisson Example
 
 Discretize $-\Delta u = f$ in $(0,1)$ using centered finite differences with $m$ internal nodes:
-$$
-A = \frac{1}{h^2} \text{tridiag}(-1, 2, -1)
-$$
+$ A = \frac{1}{h^2} \text{tridiag}(-1, 2, -1) $
 
 Split into overlapping subdomains:
 - $\Omega_1 = (0, (m_s + 1)h)$
 - $\Omega_2 = (m_s h, 1)$
 
 Update in $\Omega_1$:
-$$
-\frac{-u^{n+1}_{1,j-1} + 2u^{n+1}_{1,j} - u^{n+1}_{1,j+1}}{h^2} = f_j,\quad
+$ \frac{-u^{n+1}_{1,j-1} + 2u^{n+1}_{1,j} - u^{n+1}_{1,j+1}}{h^2} = f_j,\quad
 u^{n+1}_{1,0} = 0,\quad
-u^{n+1}_{1,m_s+1} = u^n_{2,m_s+1}
-$$
+u^{n+1}_{1,m_s+1} = u^n_{2,m_s+1} $
 
-Similar for $\Omega_2$.
-
-**Matrix View:**
-$$
-A =
-\begin{pmatrix}
-A_{11} & A_{12} \\
-A_{21} & A_{22}
-\end{pmatrix}
-\Rightarrow
-\begin{pmatrix}
-A_{11} & 0 \\
-0 & A_{22}
-\end{pmatrix}
-\begin{pmatrix}
-U^{n+1}_1 \\
-U^{n+1}_2
-\end{pmatrix}
-=
-\begin{pmatrix}
-F_1 - A_{12} U^n_2 \\
-F_2 - A_{21} U^n_1
-\end{pmatrix}
-$$
 
 ![1D decomposition with minimal overlap](images/fig_overlap_1d.png)
 
@@ -120,8 +92,8 @@ $$
 | Continuous | Discrete |
 |------------|----------|
 | $\Omega = \cup_i \Omega_i$ | $N = \cup_i N_i$ |
-| $u : \Omega \to \mathbb{R}$ | $U \in \mathbb{R}^{\#N}$ |
-| Restriction $u_i = u|_{\Omega_i}$ | $R_i \in \{0,1\}^{\#N_i \times \#N}$ |
+| $u : \Omega \to \mathbb{R}$ | $U \in \mathbb{R}^{|N|}$ |
+| Restriction $u_i = u|_{\Omega_i}$ | $R_i \in \{0,1\}^{\#N_i \times |N|}$ |
 | Extension $E_i$ | $R_i^T$ |
 | Partition: $u = \sum E_i(\chi_i u_i)$ | $\sum R_i^T D_i R_i = I$ |
 
