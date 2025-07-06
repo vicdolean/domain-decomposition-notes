@@ -62,11 +62,11 @@ Direct solvers are limited in practice due to **fill-in and memory constraints**
 ### Dennard Scaling Breakdown
 Modern processors no longer scale by frequency—parallelism is essential.
 
-![Dennard scaling](/figures/dennard_scaling.pdf)
+![Dennard scaling](/figures/dennard_scaling.png)
 
 ### Supercomputing Trends
 
-![Top500 Performance](/figures/top500-jun-2025-performance.pdf)
+![Top500 Performance](/figures/top500-jun-2025-performance.png)
 
 ### Why Domain Decomposition?
 
