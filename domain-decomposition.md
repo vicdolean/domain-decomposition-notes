@@ -70,8 +70,8 @@ This reflects RAS/ASM in global PDE solvers.
 
 **Continuous ↔ Discrete Correspondence**
 
-| Continuous                          | Discrete               |
-|-------------------------------------|------------------------|
+| Continuous                          | Discrete                       |
+|-------------------------------------|--------------------------------|
 | $\Omega = \cup_i \Omega_i$ | $N = \cup_i N_i$ |
 | $u : \Omega \to {R}$ | $U \in R^{|N|}$ |
 | Restriction $u_i: \Omega_i \to {R}$ | $R_i \in R^{|N_i| \times |N|}$ |
