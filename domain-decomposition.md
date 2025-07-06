@@ -55,7 +55,7 @@ $U^{n+1} = U^n + D^{-1}(F - AU^n)$
 ### Block Jacobi Setup
 
 Let:
-\[
+$$
 A =
 \begin{pmatrix}
 A_{11} & A_{12} \\
@@ -66,16 +66,16 @@ U =
 U_1 \\
 U_2
 \end{pmatrix}
-\]
+$$
 
 **Update:**
 - $A_{11} U^{n+1}_1 = F_1 - A_{12} U^n_2$
 - $A_{22} U^{n+1}_2 = F_2 - A_{21} U^n_1$
 
 **Residual Form:**
-\[
+$$
 U^{n+1} = U^n + \left( R_1^T A_1^{-1} R_1 + R_2^T A_2^{-1} R_2 \right) r^n
-\]
+$$
 
 This reflects RAS/ASM in global PDE solvers.
 
@@ -84,25 +84,25 @@ This reflects RAS/ASM in global PDE solvers.
 ### 1D Poisson Example
 
 Discretize $-\Delta u = f$ in $(0,1)$ using centered finite differences with $m$ internal nodes:
-\[
+$$
 A = \frac{1}{h^2} \text{tridiag}(-1, 2, -1)
-\]
+$$
 
 Split into overlapping subdomains:
 - $\Omega_1 = (0, (m_s + 1)h)$
 - $\Omega_2 = (m_s h, 1)$
 
 Update in $\Omega_1$:
-\[
+$$
 \frac{-u^{n+1}_{1,j-1} + 2u^{n+1}_{1,j} - u^{n+1}_{1,j+1}}{h^2} = f_j,\quad
 u^{n+1}_{1,0} = 0,\quad
 u^{n+1}_{1,m_s+1} = u^n_{2,m_s+1}
-\]
+$$
 
 Similar for $\Omega_2$.
 
 **Matrix View:**
-\[
+$$
 A =
 \begin{pmatrix}
 A_{11} & A_{12} \\
@@ -122,7 +122,7 @@ U^{n+1}_2
 F_1 - A_{12} U^n_2 \\
 F_2 - A_{21} U^n_1
 \end{pmatrix}
-\]
+$$
 
 ![1D decomposition with minimal overlap](images/fig_overlap_1d.png)
 
@@ -166,15 +166,15 @@ F_2 - A_{21} U^n_1
 - Use tools like METIS or SCOTCH.
 
 **Overlap Definition:**
-\[
+$$
 N^\delta_i = N_i \cup \{j : A_{ij} \ne 0\}
-\]
+$$
 
 **Algebraic Partition of Unity:**
 Let $D_i$ be diagonal with:
-\[
+$$
 (D_i)_{jj} = \frac{1}{\#\{i : j \in N^\delta_i\}}, \quad \sum_i R_i^T D_i R_i = I
-\]
+$$
 
 **FE Subdomain Partitioning:**
 If $\varphi_k$ are FE basis functions:
@@ -183,9 +183,9 @@ If $\varphi_k$ are FE basis functions:
 - $(D_i)_{kk} = 1/\mu_k$ for $k \in N_i$
 
 **Additive Schwarz Iteration:**
-\[
+$$
 U^{m+1}_j = U^m_j + A_j^{-1} R_j(F - AU^m), \quad A_j = R_j A R_j^T
-\]
+$$
 
 ![Overlapping neighborhoods in graph partitioning](images/fig_graph_overlap.png)
 
