@@ -54,13 +54,11 @@ $U^{n+1} = U^n + D^{-1}(F - AU^n)$
 
 ### Block Jacobi Setup
 
-Let:
-$A = \begin{array}{cc} A_{11} & A_{12} \\ A_{21} & A_{22} \end{array}$,  
-$U = \begin{array}{c} U_1 \\ U_2 \end{array}$
+Let the natural block splitting of $A$.
 
 **Update:**
 - $A_{11} U_1^{n+1} = F_1 - A_{12} U_2^n$
-- $A_{22} U_1^{n+1}_2 = F_2 - A_{21} U_1^n_$
+- $A_{22} U_1^{n+1} = F_2 - A_{21} U_1^n$
 
 **Residual Form:**
 $$
