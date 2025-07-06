@@ -1,4 +1,4 @@
-# Lecture 1: Introduction and Motivation — The Need for Domain Decomposition
+# Introduction and Motivation — The Need for Domain Decomposition
 
 ## Electromagnetic Wave Propagation in Heterogeneous Media
 
@@ -82,4 +82,4 @@ Modern processors no longer scale by frequency—parallelism is essential.
 - Domain decomposition enables parallelism and modularity.
 - Additive Schwarz is a foundational idea for preconditioners and solvers.
 
-[Next Lecture → Domain Decomposition Foundations](./domain-decomposition.md)
+[Next section → Domain Decomposition Foundations](./domain-decomposition.md)
