@@ -17,7 +17,7 @@ Where:
 
 **Key challenge:** The inverse problem is ill-posed and computationally demanding, especially at high frequencies or in complex domains.
 
-![Wave propagation examples](assets/figures/em_wave_examples.png)
+![Wave propagation examples](/figures/em_wave_examples.png)
 <!-- Replace with images such as avc1imag_v2.png, coupesagittale_v2.png, resistor.png -->
 
 ---
@@ -38,7 +38,7 @@ There are three main solver strategies:
 
 > Domain Decomposition (DDM) is a key hybrid method, enabling parallelism and modularity.
 
-![Solver landscape](assets/figures/whydd.png)
+![Solver landscape](/figures/whydd.png)
 
 ---
 
@@ -65,11 +65,11 @@ Direct solvers are limited in practice due to **fill-in and memory constraints**
 ### Dennard Scaling Breakdown
 Modern processors no longer scale by frequency—parallelism is essential.
 
-![Dennard scaling](assets/figures/dennard_scaling.pdf)
+![Dennard scaling](/figures/dennard_scaling.pdf)
 
 ### Supercomputing Trends
 
-![Top500 Performance](assets/figures/top500-jun-2025-performance.pdf)
+![Top500 Performance](/figures/top500-jun-2025-performance.pdf)
 
 ### Why Domain Decomposition?
 
