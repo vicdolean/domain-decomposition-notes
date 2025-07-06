@@ -21,8 +21,6 @@ Given $u^n_1$, $u^n_2$, compute:
 - Overlap is essential for communication.
 - The parallel version is known as the **Jacobi–Schwarz Method (JSM).**
 
-![Two overlapping subdomains Ω1 and Ω2](images/fig_schwarz_overlap.png)
-
 ---
 
 ## Abstract ASM and RAS: Local-to-Global Strategy
@@ -62,7 +60,7 @@ Let the natural block splitting of $A$.
 
 **Residual Form:**
 $$
-U^{n+1} = U^n + \left( R_1^T A_1^{-1} R_1 + R_2^T A_2^{-1} R_2 \right) r^n
+U^{n+1} = U^n + (R_1^T A_1^{-1} R_1 + R_2^T A_2^{-1} R_2) r^n
 $$
 
 This reflects RAS/ASM in global PDE solvers.
