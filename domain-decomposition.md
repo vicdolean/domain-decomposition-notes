@@ -191,4 +191,4 @@ U^{m+1}_j = U^m_j + A_j^{-1} R_j(F - AU^m), \quad A_j = R_j A R_j^T
 
 ![Overlapping FE subdomains](images/fig_fe_subdomains.png)
 
----
+[Next Lecture → Convergence Analysis](./convergence-analysis.md)
