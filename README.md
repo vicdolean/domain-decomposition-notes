@@ -6,6 +6,7 @@ Victorita Dolean (TU Eindhoven, The Netherlands)
 
 Slides, lecture notes and codes for the mini-course on domain decomposition, 
 XXI Jacques-Louis Lions Hispano-French School on Numerical Simulation in Physics and Engineering (https://www.sema.org.es/en/ehf2025)
+
 Freefem installation: https://github.com/FreeFem/FreeFem-sources/releases/tag/v4.15 
 
 Lecture 1: A basic introduction to DD methods 
