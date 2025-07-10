@@ -1,0 +1,26 @@
+// ff-mpirun -np 2 ffddmdemo1.edp -wg
+
+macro dimension 2// EOM 
+// 2D or 3D 
+include "ffddm.idp"
+mesh ThGlobal = square(100,100); // global mesh
+// Step 1: Decompose the mesh
+ffddmbuildDmesh( M , ThGlobal , mpiCommWorld );
+medit("Th"+mpirank,MThi);
+
+// Step 2: Define your finite element
+macro def(u) u // EOM
+macro init(u) u // EOM
+ffddmbuildDfespace( FE , M , real , def , init , P2 )
+
+FEVhi vi = x; 
+medit("v"+mpirank, MThi, vi);
+vi[] = FEDk[mpirank]; 
+medit("D"+mpirank, MThi, vi);
+
+vi=1; 
+FEupdate(vi[],true); 
+ffddmplot(FE,vi,"1")
+
+FEupdate(vi[],false); 
+ffddmplot(FE,vi,"multiplicity")
